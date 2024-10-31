@@ -1,0 +1,152 @@
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 60px;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  height: 100%;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 30px;
+  width: auto;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff9a9e;
+}
+
+.nav-button {
+  background-color: #ff9a9e;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #ff8088;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 2px;
+  width: 25px;
+  background-color: #333;
+  margin-bottom: 4px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    gap: 1rem;
+    display: none;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0.5rem;
+  }
+
+  .logo-image {
+    height: 25px;
+  }
+
+  .nav-link, .nav-button {
+    font-size: 0.8rem;
+  }
+}
+
+.nav-link.nav-button {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  width: 150px;
+  /* margin-top: 0.5rem; */
+}
+
+.dropdown-item {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: black;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show dropdown when the parent is hovered */
+.nav-link.nav-button:hover .dropdown-menu,
+.nav-link.nav-button.dropdown-open .dropdown-menu {
+  display: flex;
+}

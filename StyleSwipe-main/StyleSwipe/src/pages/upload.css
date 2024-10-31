@@ -1,0 +1,169 @@
+.upload-page {
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 20px; /* Add this to account for the fixed navbar */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.upload-section {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f477cf 0%, #fad0c4 99%, #fad0c4 100%);
+  color: #333;
+}
+
+.upload-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.upload-area {
+  background: rgba(255,255,255,0.2);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.upload-label span {
+  margin-top: 0.5rem;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.upload-section p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.upload-form {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, select {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #ff9a9e;
+  box-shadow: 0 0 0 2px rgba(255,154,158,0.2);
+}
+
+.continue-btn, .game-btn {
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.continue-btn {
+  background-color: #ff9a9e;
+  color: white;
+  border: none;
+}
+
+.continue-btn:hover {
+  background-color: #ff8088;
+}
+
+.game-btn {
+  background-color: #ec9093;
+  color: white;
+  border: none;
+}
+
+.game-btn:hover {
+  background-color: #ff8088;
+}
+
+.or-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.8rem 0;
+}
+
+.or-line {
+  width: 40%;
+  height: 1px;
+  background-color: #ddd;
+  margin: 0 10px;
+}
+
+.or-option span {
+  font-size: 0.9rem;
+  color: #777;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+
+  .upload-section, .upload-form {
+    flex: 1;
+  }
+
+  .upload-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .upload-section p, .upload-label span, input, select, .continue-btn, .game-btn {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-page {
+    padding: 0.5rem;
+  }
+
+  .upload-section, .upload-form {
+    padding: 1.5rem;
+  }
+
+  .upload-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .upload-area {
+    padding: 1rem;
+  }
+
+  input, select, .continue-btn, .game-btn {
+    padding: 0.7rem;
+  }
+}
